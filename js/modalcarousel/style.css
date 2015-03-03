@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+.light_window_bg{
+    width:100%;
+    height:100%;
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    -ms-filter:"alpha(opacity=70)";
+    -moz-opacity:0.7;
+    -khtml-opacity:0.7;
+    background-color:#000000;
+    position:fixed;
+    bottom:0;
+    left:0;
+    z-index:1040;
+    overflow:hidden
+}
+.light_window{
+	border-radius: 10px;
+	background: #FFF;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 728px;
+	height: 740px;
+	z-index:10000;
+}
+.light_window .carousel {
+  position: relative;
+  margin-bottom: 14px;
+}
+.light_window .carousel:before, .carousel:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.light_window .carousel:after {
+  clear: both;
+}
+.light_window .carousel .viewport {
+  float: left;
+  height: 120px;
+  overflow: hidden;
+  margin-left: 14px;
+  width: 700px;
+}
+.light_window .carousel .viewport .contents {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  left: 0px;
+}
+.light_window .carousel .viewport .contents li {
+  list-style: none;
+  float: left;
+  height: 200px;
+  margin: 0 20px 0 0;
+}
+.light_window .mainvis{
+    padding: 14px;
+	margin-bottom: 10px;
+	width: 700px;
+}
+
+/* btn */
+.light_window .button,.light_window_close{
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	background: #B3B3B3;
+	-webkit-border-radius: 50%;
+			border-radius: 50%;
+	position: absolute;
+}
+.light_window .button{
+	color: #FFF;
+	width: 30px;
+	height: 30px;
+}
+.light_window .button .fa{
+	line-height: 30px;
+}
+.light_window .light_window_close{
+	color: #666;
+	line-height: 42px;
+	cursor: pointer;
+	width: 42px;
+	height: 42px;
+	top:-15px;
+	right:-15px;
+	z-index:12000;
+}
+.light_window .light_window_close .fa{
+	line-height: 42px;
+	font-size: 23px;
+}
+.light_window .prev{
+	top:38%;
+	left: -10px;
+}
+.light_window .next{
+	top:38%;
+	right: -10px;
+}
+/* title */
+.light_window .light_window_title{
+	margin: 0;
+	margin-top: 5px;
+	font-size: 13px;
+}
+
+@media screen and (max-width: 640px){
+	.light_window img{
+		width: 100%;
+		height: auto;
+	}
+	.light_window .mainvis{
+		width: auto;
+	}
+	.light_window{
+		width: 90%;
+		height: auto;
+		z-index:10000;
+	}
+	.light_window .carousel .viewport {
+		overflow: hidden;
+		max-width: 94%;
+		height: 100px;
+	}
+	.light_window .carousel .viewport .contents {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		position: relative;
+		left: 0px;
+	}
+	.light_window .carousel .viewport .contents li {
+		height: auto;
+	}
+}
